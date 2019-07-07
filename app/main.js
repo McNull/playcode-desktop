@@ -42,9 +42,13 @@ function createMainWindow() {
     resizable: true,
     fullscreenable: true,
     autoHideMenuBar: true,
+    webPreferences: { webSecurity: false }
   })
+
+
   if ( appIsDev ) {
-    appView.loadURL('http://localhost:7070')
+    //appView.loadURL('http://localhost:7070')
+    appView.loadURL('https://playcode.io')
   } else {
     appView.loadURL('https://playcode.io')
   }
